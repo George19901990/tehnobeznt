@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5, viewport-fit=cover">
+    <meta name="description" content="Контакты охранной организации Технологии безопасности в Нижнем Тагиле. Адрес, телефон, email, реквизиты, схема проезда. Свяжитесь с нами для консультации.">
+    <title>Контакты | Технологии безопасности — Свяжитесь с нами в Нижнем Тагиле</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0a0f1a;
+            min-height: 100vh;
+            color: #fff;
+            line-height: 1.5;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 30% 40%, #0d1a2a 0%, #050a12 100%);
+            z-index: -2;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.03"><path fill="none" d="M0,0 L100,0 L100,100 L0,100 Z" stroke="%23D4AF37" stroke-width="0.5"/><circle cx="20" cy="20" r="1" fill="%23D4AF37"/><circle cx="80" cy="40" r="1" fill="%23D4AF37"/><circle cx="50" cy="80" r="1" fill="%23D4AF37"/></svg>');
+            background-repeat: repeat;
+            z-index: -1;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 15, 26, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            z-index: 1000;
+            padding: 0.8rem 2rem;
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            height: 50px;
+            width: 50px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .logo-text .name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #D4AF37;
+        }
+
+        .logo-text .sub {
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.6);
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: #D4AF37;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #D4AF37;
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after, nav a.active::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 2px;
+            background: #D4AF37;
+            transition: 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 0.8rem 1rem;
+            }
+            .menu-toggle {
+                display: flex;
+            }
+            nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(10, 15, 26, 0.95);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 1.5rem;
+                gap: 1rem;
+                border-top: 1px solid rgba(212, 175, 55, 0.2);
+            }
+            nav.active {
+                display: flex;
+            }
+            nav a {
+                padding: 0.5rem 0;
+                text-align: center;
+            }
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 2rem 2rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #fff, #D4AF37);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            color: rgba(255,255,255,0.6);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #D4AF37, #b8941f);
+            color: #0a0f1a;
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            color: #D4AF37;
+        }
+
+        .btn-outline:hover {
+            background: rgba(212, 175, 55, 0.1);
+            border-color: #D4AF37;
+            transform: translateY(-3px);
+        }
+
+        /* КОНТАКТНАЯ СЕТКА */
+        .contacts-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (max-width: 992px) {
+            .contacts-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        /* КОНТАКТНЫЕ КАРТОЧКИ */
+        .contact-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-card {
+            background: rgba(20, 30, 45, 0.5);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .contact-card:hover {
+            transform: translateX(5px);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(212, 175, 55, 0.15);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-icon i {
+            font-size: 1.5rem;
+            color: #D4AF37;
+        }
+
+        .contact-info h3 {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-info .value {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .contact-info .value a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-info .value a:hover {
+            color: #D4AF37;
+        }
+
+        .contact-info .small {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.4);
+            margin-top: 0.3rem;
+        }
+
+        /* РЕКВИЗИТЫ */
+        .requisites-card {
+            background: rgba(20, 30, 45, 0.5);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .requisites-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .requisites-card h3 i {
+            color: #D4AF37;
+        }
+
+        .requisites-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        @media (max-width: 480px) {
+            .requisites-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .requisite-item {
+            padding: 0.8rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+        }
+
+        .requisite-item .label {
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 0.3rem;
+        }
+
+        .requisite-item .value {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        /* ФОРМА ОБРАТНОЙ СВЯЗИ */
+        .form-card {
+            background: rgba(20, 30, 45, 0.5);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 2rem;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .form-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-card p {
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            font-size: 0.9rem;
+            color: #fff;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #D4AF37;
+            background: rgba(255,255,255,0.12);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255,255,255,0.4);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-group select option {
+            background: #0a0f1a;
+            color: #fff;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+            margin: 1.5rem 0;
+        }
+
+        .checkbox-group input {
+            width: 18px;
+            height: 18px;
+            margin-top: 2px;
+            cursor: pointer;
+        }
+
+        .checkbox-group label {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.6);
+            cursor: pointer;
+        }
+
+        .checkbox-group a {
+            color: #D4AF37;
+            text-decoration: none;
+        }
+
+        .checkbox-group a:hover {
+            text-decoration: underline;
+        }
+
+        .form-card button {
+            width: 100%;
+            cursor: pointer;
+        }
+
+        /* КАРТА */
+        .map-section {
+            margin: 3rem 0;
+        }
+
+        .map-container {
+            background: rgba(20, 30, 45, 0.5);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 1rem;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 350px;
+            border-radius: 16px;
+            border: none;
+        }
+
+        .map-address {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+            padding: 1rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+        }
+
+        .map-address span {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .map-address a {
+            color: #D4AF37;
+            text-decoration: none;
+        }
+
+        /* СОЦСЕТИ */
+        .social-section {
+            margin: 2rem 0;
+        }
+
+        .social-grid {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 2rem;
+            background: rgba(20, 30, 45, 0.5);
+            backdrop-filter: blur(10px);
+            border-radius: 60px;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        .social-link i {
+            font-size: 1.5rem;
+        }
+
+        .social-link.vk i { color: #4C75A3; }
+        .social-link.telegram i { color: #26A5E4; }
+        .social-link.whatsapp i { color: #25D366; }
+
+        .social-link span {
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .cta-block {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(20, 30, 45, 0.9));
+            border-radius: 30px;
+            padding: 3rem;
+            text-align: center;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            margin-top: 3rem;
+        }
+
+        .cta-block .phone-large {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #D4AF37;
+            text-decoration: none;
+            display: inline-block;
+            margin: 1rem 0;
+        }
+
+        footer {
+            background: rgba(5, 10, 18, 0.9);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: #D4AF37;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .footer-col p, .footer-col a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.85rem;
+            line-height: 1.8;
+        }
+
+        .footer-col a:hover {
+            color: #D4AF37;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 35px;
+            height: 35px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #D4AF37;
+            color: #0a0f1a;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.4);
+        }
+
+        @media (max-width: 768px) {
+            main {
+                padding: 80px 1rem 1rem;
+            }
+            .page-header h1 {
+                font-size: 1.8rem;
+            }
+            .contact-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .social-link {
+                padding: 0.8rem 1.5rem;
+            }
+            .cta-block .phone-large {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Технологии безопасности" onerror="this.style.display='none'">
+            <div class="logo-text">
+                <div class="name">Технологии безопасности</div>
+                <div class="sub">ОХРАННАЯ ОРГАНИЗАЦИЯ</div>
+            </div>
+        </div>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="mainNav">
+            <a href="index.html">Главная</a>
+            <a href="services.html">Услуги</a>
+            <a href="about.html">О нас</a>
+            <a href="vacancies.html">Вакансии</a>
+            <a href="partners.html">Партнёры</a>
+            <a href="contacts.html" class="active">Контакты</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="page-header">
+        <h1>Контакты</h1>
+        <p>Свяжитесь с нами удобным для вас способом</p>
+    </div>
+
+    <!-- ОСНОВНАЯ КОНТАКТНАЯ ИНФОРМАЦИЯ -->
+    <div class="contacts-grid">
+        <div class="contact-cards">
+            <div class="contact-card">
+                <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                <div class="contact-info">
+                    <h3>Телефон</h3>
+                    <div class="value"><a href="tel:+79222299975">+7 (922) 229-99-75</a></div>
+                    <div class="small">Бесплатно с мобильных и городских</div>
+                </div>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                <div class="contact-info">
+                    <h3>Email</h3>
+                    <div class="value"><a href="mailto:techbez26@bk.ru">techbez26@bk.ru</a></div>
+                    <div class="small">Ответим в течение 24 часов</div>
+                </div>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="contact-info">
+                    <h3>Адрес офиса</h3>
+                    <div class="value">г. Нижний Тагил, ул. Октябрьской Революции д. 27</div>
+                    <div class="small">Пн-Пт: 9:00 – 18:00</div>
+                </div>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                <div class="contact-info">
+                    <h3>Режим работы</h3>
+                    <div class="value">Круглосуточно / 24/7</div>
+                    <div class="small">Отдел кадров: пн-пт 10:00 – 17:00</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- РЕКВИЗИТЫ -->
+        <div class="requisites-card">
+            <h3><i class="fas fa-building"></i> Реквизиты компании</h3>
+            <div class="requisites-grid">
+                <div class="requisite-item">
+                    <div class="label">Полное наименование</div>
+                    <div class="value">ООО ЧО "Технологии безопасности"</div>
+                </div>
+                <div class="requisite-item">
+                    <div class="label">ИНН / КПП</div>
+                    <div class="value">6671439365 / 662301001</div>
+                </div>
+                <div class="requisite-item">
+                    <div class="label">ОГРН</div>
+                    <div class="value">1136671037986</div>
+                </div>
+                <div class="requisite-item">
+                    <div class="label">ОКПО</div>
+                    <div class="value">32119458</div>
+                </div>
+                <div class="requisite-item">
+                    <div class="label">Лицензия ЧОП</div>
+                    <div class="value">Л056-00106-66/00037135</div>
+                </div>
+                <div class="requisite-item">
+                    <div class="label">Юридический адрес</div>
+                    <div class="value">622001, г. Нижний Тагил, ул. Октябрьской Революции д. 27</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ФОРМА ОБРАТНОЙ СВЯЗИ -->
+    <div class="form-card">
+        <h3>Написать нам</h3>
+        <p>Оставьте заявку, и мы свяжемся с вами в ближайшее время</p>
+        <form action="https://formsubmit.co/techbez26@bk.ru" method="POST">
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Ваше имя *" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" name="phone" placeholder="Ваш телефон *" required>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Ваш Email">
+            </div>
+            <div class="form-group">
+                <select name="subject">
+                    <option value="">Выберите тему обращения</option>
+                    <option value="consultation">Заказать консультацию</option>
+                    <option value="calculate">Рассчитать стоимость охраны</option>
+                    <option value="vacancy">Вопрос по вакансии</option>
+                    <option value="other">Другой вопрос</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <textarea name="message" placeholder="Ваше сообщение *" required></textarea>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" name="agreement" required>
+                <label>Я согласен на <a href="privacy.html">обработку персональных данных</a></label>
+            </div>
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://tehnobeznt.ru/thanks.html">
+            <input type="hidden" name="_subject" value="Новая заявка с сайта Технологии безопасности">
+            <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+        </form>
+    </div>
+
+    <!-- КАРТА -->
+    <div class="map-section">
+        <div class="map-container">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A1a2b3c4d5e6f7g8h9i0j&source=constructor"
+                    allowfullscreen="true"
+                    loading="lazy"
+                    title="Карта - Технологии безопасности Нижний Тагил">
+            </iframe>
+            <div class="map-address">
+                <span><i class="fas fa-location-dot"></i> г. Нижний Тагил, ул. Октябрьской Революции д. 27</span>
+                <a href="https://2gis.ru/ntagil/geo/6333822631151997/59.985349%2C57.911721?m=59.985564%2C57.911687%2F16" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Открыть на 2ГИС
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- СОЦИАЛЬНЫЕ СЕТИ -->
+    <div class="social-section">
+        <div class="social-grid">
+            <a href="https://vk.com/tehnobeznt" target="_blank" class="social-link vk">
+                <i class="fab fa-vk"></i>
+                <span>ВКонтакте</span>
+            </a>
+            <a href="https://t.me/+79222299975" target="_blank" class="social-link telegram">
+                <i class="fab fa-telegram"></i>
+                <span>Telegram</span>
+            </a>
+            <a href="https://wa.me/79222299975" target="_blank" class="social-link whatsapp">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="cta-block">
+        <h2>Остались вопросы?</h2>
+        <p>Позвоните нам — бесплатная консультация специалиста</p>
+        <a href="tel:+79222299975" class="phone-large"><i class="fas fa-phone-alt"></i> +7 (922) 229-99-75</a>
+        <div style="margin-top: 1.5rem;">
+            <a href="#" onclick="document.querySelector('.form-card').scrollIntoView({behavior: 'smooth'}); return false;" class="btn btn-primary">Заказать звонок</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h4>О компании</h4>
+            <p>ООО ЧО "Технологии безопасности" — профессиональная охрана в Нижнем Тагиле с 2013 года.</p>
+            <div class="social-links">
+                <a href="https://vk.com/tehnobeznt" target="_blank"><i class="fab fa-vk"></i></a>
+                <a href="https://t.me/+79222299975" target="_blank"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>Контакты</h4>
+            <p><i class="fas fa-phone"></i> <a href="tel:+79222299975">+7 (922) 229-99-75</a></p>
+            <p><i class="fas fa-envelope"></i> techbez26@bk.ru</p>
+            <p><i class="fas fa-map-marker-alt"></i> г. Нижний Тагил, ул. Октябрьской Революции д. 27</p>
+        </div>
+        <div class="footer-col">
+            <h4>Документы</h4>
+            <p><a href="privacy.html">Политика конфиденциальности</a></p>
+            <p><a href="personal-data.html">Обработка персональных данных</a></p>
+            <p><a href="license.html">Лицензии и свидетельства</a></p>
+        </div>
+        <div class="footer-col">
+            <h4>Реквизиты</h4>
+            <p>ИНН: 6671439365</p>
+            <p>ОГРН: 1136671037986</p>
+            <p>КПП: 662301001</p>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© 2026 ООО ЧО "Технологии безопасности". Все права защищены.</p>
+    </div>
+</footer>
+
+<script>
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('mainNav');
+    if (toggle && nav) {
+        toggle.addEventListener('click', () => {
+            toggle.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                toggle.classList.remove('active');
+                nav.classList.remove('active');
+            });
+        });
+    }
+</script>
+
+<div style="position: fixed; bottom: 25px; right: 25px; z-index: 999;">
+    <a href="tel:+79222299975" style="display: block; width: 55px; height: 55px; background: linear-gradient(135deg, #D4AF37, #b8941f); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);">
+        <i class="fas fa-phone-alt" style="color: #0a0f1a; font-size: 1.3rem;"></i>
+    </a>
+</div>
+
+</body>
+</html>

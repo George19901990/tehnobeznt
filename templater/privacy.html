@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5, viewport-fit=cover">
+    <meta name="description" content="Политика конфиденциальности ООО ЧО Технологии безопасности. Обработка персональных данных, защита информации, права пользователей.">
+    <title>Политика конфиденциальности | Технологии безопасности</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0a0f1a;
+            min-height: 100vh;
+            color: #fff;
+            line-height: 1.5;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 30% 40%, #0d1a2a 0%, #050a12 100%);
+            z-index: -2;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.03"><path fill="none" d="M0,0 L100,0 L100,100 L0,100 Z" stroke="%23D4AF37" stroke-width="0.5"/><circle cx="20" cy="20" r="1" fill="%23D4AF37"/><circle cx="80" cy="40" r="1" fill="%23D4AF37"/><circle cx="50" cy="80" r="1" fill="%23D4AF37"/></svg>');
+            background-repeat: repeat;
+            z-index: -1;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 15, 26, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            z-index: 1000;
+            padding: 0.8rem 2rem;
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            height: 50px;
+            width: 50px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .logo-text .name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #D4AF37;
+        }
+
+        .logo-text .sub {
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.6);
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: #D4AF37;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #D4AF37;
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 2px;
+            background: #D4AF37;
+            transition: 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 0.8rem 1rem;
+            }
+            .menu-toggle {
+                display: flex;
+            }
+            nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(10, 15, 26, 0.95);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 1.5rem;
+                gap: 1rem;
+                border-top: 1px solid rgba(212, 175, 55, 0.2);
+            }
+            nav.active {
+                display: flex;
+            }
+            nav a {
+                padding: 0.5rem 0;
+                text-align: center;
+            }
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 100px 2rem 2rem;
+        }
+
+        /* СТИЛИ ДЛЯ ДОКУМЕНТА */
+        .legal-document {
+            background: rgba(20, 30, 45, 0.5);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 2.5rem;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .document-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .document-header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #fff, #D4AF37);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .document-subtitle {
+            color: #D4AF37;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .document-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.85rem;
+        }
+
+        .document-meta i {
+            color: #D4AF37;
+            margin-right: 0.5rem;
+        }
+
+        /* СЕКЦИИ */
+        .legal-section {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .legal-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .legal-section h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            color: #D4AF37;
+        }
+
+        .legal-section p {
+            color: rgba(255,255,255,0.7);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .legal-section a {
+            color: #D4AF37;
+            text-decoration: none;
+        }
+
+        .legal-section a:hover {
+            text-decoration: underline;
+        }
+
+        /* ТЕРМИНЫ */
+        .terms-list, .rights-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .term-item, .right-item {
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+            padding: 1.2rem;
+            border-left: 3px solid #D4AF37;
+        }
+
+        .term-item h3, .right-item {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .term-item p, .right-item span {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+        }
+
+        .right-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .right-item i {
+            color: #D4AF37;
+            font-size: 1.2rem;
+            width: 24px;
+        }
+
+        /* ИНФО ЛИСТ */
+        .info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 1.2rem;
+            padding: 1.2rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+        }
+
+        .info-item i {
+            color: #D4AF37;
+            font-size: 1.5rem;
+            width: 40px;
+        }
+
+        .info-item h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .info-item ul {
+            list-style: none;
+        }
+
+        .info-item li {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+            padding: 0.2rem 0;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+
+        .info-item li::before {
+            content: "•";
+            color: #D4AF37;
+            position: absolute;
+            left: 0;
+        }
+
+        /* ЦЕЛИ */
+        .purposes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.2rem;
+            margin: 1.5rem 0;
+        }
+
+        .purpose-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+            padding: 1.2rem;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .purpose-card:hover {
+            transform: translateY(-3px);
+            background: rgba(255,255,255,0.08);
+        }
+
+        .purpose-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(212, 175, 55, 0.15);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+
+        .purpose-icon i {
+            font-size: 1.3rem;
+            color: #D4AF37;
+        }
+
+        .purpose-card h3 {
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .purpose-card p {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* ПРАВОВЫЕ ОСНОВАНИЯ */
+        .legal-bases {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            margin: 1rem 0;
+        }
+
+        .law-reference {
+            background: rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 1rem;
+            border-left: 3px solid #D4AF37;
+        }
+
+        .law-number {
+            font-weight: 600;
+            color: #D4AF37;
+            margin-bottom: 0.3rem;
+        }
+
+        .law-title {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+        }
+
+        /* КОНТАКТЫ В ДОКУМЕНТЕ */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            padding: 1rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 16px;
+        }
+
+        .contact-item i {
+            color: #D4AF37;
+            font-size: 1.2rem;
+            width: 30px;
+        }
+
+        .contact-item h3 {
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
+            color: #fff;
+        }
+
+        .contact-item p, .contact-item a {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: #D4AF37;
+        }
+
+        /* ПОДВАЛ ДОКУМЕНТА */
+        .document-footer {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .signature-block {
+            text-align: right;
+            margin-bottom: 1.5rem;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .signature {
+            font-size: 1rem;
+            color: #D4AF37;
+            margin: 0.5rem 0;
+        }
+
+        .document-notice {
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .document-notice i {
+            color: #D4AF37;
+            margin-right: 0.5rem;
+        }
+
+        /* КНОПКА НАЗАД */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+            padding: 0.8rem 1.5rem;
+            background: rgba(20, 30, 45, 0.5);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .back-link:hover {
+            color: #D4AF37;
+            border-color: rgba(212, 175, 55, 0.3);
+            transform: translateX(-5px);
+        }
+
+        footer {
+            background: rgba(5, 10, 18, 0.9);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: #D4AF37;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .footer-col p, .footer-col a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.85rem;
+            line-height: 1.8;
+        }
+
+        .footer-col a:hover {
+            color: #D4AF37;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 35px;
+            height: 35px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #D4AF37;
+            color: #0a0f1a;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.4);
+        }
+
+        @media (max-width: 768px) {
+            main {
+                padding: 80px 1rem 1rem;
+            }
+            .legal-document {
+                padding: 1.5rem;
+            }
+            .document-header h1 {
+                font-size: 1.5rem;
+            }
+            .info-item {
+                flex-direction: column;
+            }
+            .signature-block {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Технологии безопасности" onerror="this.style.display='none'">
+            <div class="logo-text">
+                <div class="name">Технологии безопасности</div>
+                <div class="sub">ОХРАННАЯ ОРГАНИЗАЦИЯ</div>
+            </div>
+        </div>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="mainNav">
+            <a href="index.html">Главная</a>
+            <a href="services.html">Услуги</a>
+            <a href="about.html">О нас</a>
+            <a href="vacancies.html">Вакансии</a>
+            <a href="partners.html">Партнёры</a>
+            <a href="contacts.html">Контакты</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="legal-document">
+        <div class="document-header">
+            <h1><i class="fas fa-shield-alt"></i> Политика конфиденциальности</h1>
+            <p class="document-subtitle">ООО ЧО "Технологии безопасности"</p>
+            <div class="document-meta">
+                <p><i class="fas fa-calendar-alt"></i> Дата вступления в силу: 01 января 2024 года</p>
+                <p><i class="fas fa-file-contract"></i> Версия: 1.0</p>
+            </div>
+        </div>
+
+        <div class="document-content">
+            <section class="legal-section">
+                <h2>1. Общие положения</h2>
+                <p>1.1. Настоящая Политика конфиденциальности (далее — «Политика») определяет порядок обработки и защиты информации о физических лицах (далее — «Пользователи»), которая может быть получена ЧОО «Технологии безопасности» (далее — «Оператор») при использовании Пользователем сайта <a href="index.html">tehnobeznt.ru</a> (далее — «Сайт»).</p>
+                <p>1.2. Целью настоящей Политики является обеспечение надлежащей защиты информации о Пользователях, в том числе их персональных данных, от несанкционированного доступа и разглашения.</p>
+                <p>1.3. Использование Сайта означает безоговорочное согласие Пользователя с настоящей Политикой и указанными в ней условиями обработки его информации.</p>
+                <p>1.4. В случае несогласия с условиями Политики Пользователь должен прекратить использование Сайта.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>2. Термины и определения</h2>
+                <div class="terms-list">
+                    <div class="term-item">
+                        <h3>2.1. Персональные данные</h3>
+                        <p>Любая информация, относящаяся к прямо или косвенно определенному или определяемому физическому лицу (субъекту персональных данных).</p>
+                    </div>
+                    <div class="term-item">
+                        <h3>2.2. Обработка персональных данных</h3>
+                        <p>Любое действие (операция) или совокупность действий (операций), совершаемых с использованием средств автоматизации или без использования таких средств с персональными данными.</p>
+                    </div>
+                    <div class="term-item">
+                        <h3>2.3. Конфиденциальность персональных данных</h3>
+                        <p>Обязательное для соблюдения Оператором требование не допускать их распространения без согласия субъекта персональных данных.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="legal-section">
+                <h2>3. Собираемая информация</h2>
+                <p>3.1. Оператор может собирать следующую информацию о Пользователях:</p>
+                <div class="info-list">
+                    <div class="info-item">
+                        <i class="fas fa-user"></i>
+                        <div>
+                            <h3>3.1.1. Персональные данные</h3>
+                            <ul>
+                                <li>Фамилия, имя, отчество</li>
+                                <li>Номер телефона</li>
+                                <li>Адрес электронной почты</li>
+                                <li>Должность и место работы (для корпоративных клиентов)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-desktop"></i>
+                        <div>
+                            <h3>3.1.2. Техническая информация</h3>
+                            <ul>
+                                <li>IP-адрес</li>
+                                <li>Тип браузера</li>
+                                <li>Время доступа</li>
+                                <li>Адреса запрашиваемых страниц</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="legal-section">
+                <h2>4. Цели сбора информации</h2>
+                <p>4.1. Собранная информация используется для следующих целей:</p>
+                <div class="purposes-grid">
+                    <div class="purpose-card">
+                        <div class="purpose-icon"><i class="fas fa-comments"></i></div>
+                        <h3>Обратная связь</h3>
+                        <p>Для ответа на запросы и обращения Пользователей</p>
+                    </div>
+                    <div class="purpose-card">
+                        <div class="purpose-icon"><i class="fas fa-cogs"></i></div>
+                        <h3>Улучшение работы Сайта</h3>
+                        <p>Анализ использования Сайта для улучшения его функциональности</p>
+                    </div>
+                    <div class="purpose-card">
+                        <div class="purpose-icon"><i class="fas fa-bell"></i></div>
+                        <h3>Уведомления</h3>
+                        <p>Информирование об изменениях в услугах и акциях</p>
+                    </div>
+                    <div class="purpose-card">
+                        <div class="purpose-icon"><i class="fas fa-gavel"></i></div>
+                        <h3>Выполнение обязательств</h3>
+                        <p>Заключение и исполнение договоров на оказание охранных услуг</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="legal-section">
+                <h2>5. Правовые основания обработки</h2>
+                <p>5.1. Обработка персональных данных осуществляется на следующих правовых основаниях:</p>
+                <div class="legal-bases">
+                    <div class="law-reference">
+                        <div class="law-number">Федеральный закон от 27.07.2006 № 152-ФЗ</div>
+                        <div class="law-title">«О персональных данных»</div>
+                    </div>
+                    <div class="law-reference">
+                        <div class="law-number">Федеральный закон от 13.03.2006 № 38-ФЗ</div>
+                        <div class="law-title">«О рекламе»</div>
+                    </div>
+                    <div class="law-reference">
+                        <div class="law-number">Федеральный закон от 07.02.1992 № 2300-1</div>
+                        <div class="law-title">«О защите прав потребителей»</div>
+                    </div>
+                    <div class="law-reference">
+                        <div class="law-number">Федеральный закон от 11.03.1992 № 2487-1</div>
+                        <div class="law-title">«О частной детективной и охранной деятельности в Российской Федерации»</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="legal-section">
+                <h2>6. Защита информации</h2>
+                <p>6.1. Оператор принимает необходимые организационные и технические меры для защиты персональных данных Пользователей от неправомерного или случайного доступа, уничтожения, изменения, блокирования, копирования, распространения, а также от иных неправомерных действий.</p>
+                <p>6.2. Доступ к персональным данным имеют только уполномоченные сотрудники Оператора, которые приняли обязательства о сохранении конфиденциальности.</p>
+                <p>6.3. Оператор не передает персональные данные третьим лицам, за исключением случаев, предусмотренных законодательством Российской Федерации.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>7. Права субъектов персональных данных</h2>
+                <p>7.1. Пользователь имеет право:</p>
+                <div class="rights-list">
+                    <div class="right-item"><i class="fas fa-eye"></i><span>На доступ к своим персональным данным</span></div>
+                    <div class="right-item"><i class="fas fa-edit"></i><span>На уточнение (обновление, изменение) своих персональных данных</span></div>
+                    <div class="right-item"><i class="fas fa-ban"></i><span>На блокирование или уничтожение своих персональных данных</span></div>
+                    <div class="right-item"><i class="fas fa-times-circle"></i><span>На отзыв согласия на обработку персональных данных</span></div>
+                    <div class="right-item"><i class="fas fa-exclamation-triangle"></i><span>На обжалование действий или бездействия Оператора</span></div>
+                </div>
+                <p>7.2. Для реализации своих прав Пользователь может направить обращение по адресу электронной почты: <a href="mailto:techbez26@bk.ru">techbez26@bk.ru</a></p>
+            </section>
+
+            <section class="legal-section">
+                <h2>8. Заключительные положения</h2>
+                <p>8.1. Оператор вправе вносить изменения в настоящую Политику конфиденциальности. Новая редакция Политики вступает в силу с момента ее размещения на Сайте.</p>
+                <p>8.2. К настоящей Политике и отношениям между Пользователем и Оператором, возникающим в связи с применением Политики конфиденциальности, подлежит применению право Российской Федерации.</p>
+                <p>8.3. Все возможные споры подлежат разрешению в соответствии с законодательством Российской Федерации по месту нахождения Оператора.</p>
+                <p>8.4. Признание судом какого-либо положения Политики недействительным или не подлежащим принудительному исполнению не влечет недействительности или неисполнимости иных положений Политики.</p>
+            </section>
+
+            <section class="legal-section">
+                <h2>9. Контактная информация</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-building"></i>
+                        <div>
+                            <h3>ООО ЧО "Технологии безопасности"</h3>
+                            <p>Юридический адрес: 622036, Свердловская область, город Нижний Тагил, улица Юбилейная, дом 51, офис 21</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Электронная почта</h3>
+                            <p><a href="mailto:techbez26@bk.ru">techbez26@bk.ru</a> — общие вопросы</p>
+                            <p><a href="mailto:tehnobezopasnost-nt@mail.ru">tehnobezopasnost-nt@mail.ru</a> — вопросы безопасности</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Телефоны</h3>
+                            <p><a href="tel:+79089262231">8-908-926-22-31</a> — отдел кадров</p>
+                            <p><a href="tel:+79222299975">8-922-229-99-75</a> — руководитель</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="document-footer">
+                <div class="signature-block">
+                    <p>Директор</p>
+                    <p>ЧОО "Технологии безопасности"</p>
+                    <p class="signature">Радлинская Т.В.</p>
+                    <p>"01" января 2024 г.</p>
+                </div>
+                <div class="document-notice">
+                    <p><i class="fas fa-info-circle"></i> Документ разработан в соответствии с требованиями законодательства РФ и подлежит периодическому обновлению.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Вернуться на главную</a>
+</main>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h4>О компании</h4>
+            <p>ООО ЧО "Технологии безопасности" — профессиональная охрана в Нижнем Тагиле с 2013 года.</p>
+            <div class="social-links">
+                <a href="https://vk.com/tehnobeznt" target="_blank"><i class="fab fa-vk"></i></a>
+                <a href="https://t.me/+79222299975" target="_blank"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>Контакты</h4>
+            <p><i class="fas fa-phone"></i> <a href="tel:+79222299975">+7 (922) 229-99-75</a></p>
+            <p><i class="fas fa-envelope"></i> techbez26@bk.ru</p>
+            <p><i class="fas fa-map-marker-alt"></i> г. Нижний Тагил, ул. Октябрьской Революции д. 27</p>
+        </div>
+        <div class="footer-col">
+            <h4>Документы</h4>
+            <p><a href="privacy.html">Политика конфиденциальности</a></p>
+            <p><a href="personal-data.html">Обработка персональных данных</a></p>
+            <p><a href="license.html">Лицензии и свидетельства</a></p>
+        </div>
+        <div class="footer-col">
+            <h4>Реквизиты</h4>
+            <p>ИНН: 6671439365</p>
+            <p>ОГРН: 1136671037986</p>
+            <p>КПП: 662301001</p>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© 2026 ООО ЧО "Технологии безопасности". Все права защищены.</p>
+    </div>
+</footer>
+
+<script>
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('mainNav');
+    if (toggle && nav) {
+        toggle.addEventListener('click', () => {
+            toggle.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                toggle.classList.remove('active');
+                nav.classList.remove('active');
+            });
+        });
+    }
+</script>
+
+<div style="position: fixed; bottom: 25px; right: 25px; z-index: 999;">
+    <a href="tel:+79222299975" style="display: block; width: 55px; height: 55px; background: linear-gradient(135deg, #D4AF37, #b8941f); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);">
+        <i class="fas fa-phone-alt" style="color: #0a0f1a; font-size: 1.3rem;"></i>
+    </a>
+</

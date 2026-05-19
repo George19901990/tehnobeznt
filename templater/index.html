@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5, viewport-fit=cover">
+    <meta name="description" content="ООО ЧО Технологии безопасности — профессиональные услуги охраны в Нижнем Тагиле. Физическая охрана, мониторинг и современные системы безопасности с 2013 года.">
+    <title>Технологии безопасности | Профессиональная охрана в Нижнем Тагиле</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0a0f1a;
+            min-height: 100vh;
+            color: #fff;
+            line-height: 1.5;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 30% 40%, #0d1a2a 0%, #050a12 100%);
+            z-index: -2;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.03"><path fill="none" d="M0,0 L100,0 L100,100 L0,100 Z" stroke="%23D4AF37" stroke-width="0.5"/><circle cx="20" cy="20" r="1" fill="%23D4AF37"/><circle cx="80" cy="40" r="1" fill="%23D4AF37"/><circle cx="50" cy="80" r="1" fill="%23D4AF37"/></svg>');
+            background-repeat: repeat;
+            z-index: -1;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 15, 26, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            z-index: 1000;
+            padding: 0.8rem 2rem;
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            height: 90px;
+            width: 90px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .logo-text .name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #D4AF37;
+        }
+
+        .logo-text .sub {
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.6);
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: #D4AF37;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #D4AF37;
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 2px;
+            background: #D4AF37;
+            transition: 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 0.8rem 1rem;
+            }
+            .menu-toggle {
+                display: flex;
+            }
+            nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(10, 15, 26, 0.95);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 1.5rem;
+                gap: 1rem;
+                border-top: 1px solid rgba(212, 175, 55, 0.2);
+            }
+            nav.active {
+                display: flex;
+            }
+            nav a {
+                padding: 0.5rem 0;
+                text-align: center;
+            }
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 2rem 2rem;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4rem;
+            min-height: 70vh;
+            flex-wrap: wrap;
+        }
+
+        .hero-content {
+            flex: 1.2;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            color: #D4AF37;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #fff 0%, #D4AF37 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 2rem;
+            max-width: 500px;
+            line-height: 1.6;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #D4AF37;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #D4AF37, #b8941f);
+            color: #0a0f1a;
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            color: #D4AF37;
+        }
+
+        .btn-outline:hover {
+            background: rgba(212, 175, 55, 0.1);
+            border-color: #D4AF37;
+            transform: translateY(-3px);
+        }
+
+        .btn-sm {
+            padding: 0.6rem 1.2rem;
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            display: inline-block;
+        }
+
+        .hero-right {
+            flex: 0.8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .license-card {
+            background: rgba(20, 30, 45, 0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .license-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(212, 175, 55, 0.15);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+
+        .license-icon i {
+            font-size: 2rem;
+            color: #D4AF37;
+        }
+
+        .license-number {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #D4AF37;
+            word-break: break-word;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section {
+            margin: 5rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-tag {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.1);
+            color: #D4AF37;
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+        }
+
+        .section-header p {
+            color: rgba(255,255,255,0.6);
+            max-width: 600px;
+            margin: 1rem auto 0;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .glass-card {
+            background: rgba(20, 30, 45, 0.5);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s;
+            border: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            background: rgba(30, 45, 65, 0.6);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(212, 175, 55, 0.15);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-icon i {
+            font-size: 1.5rem;
+            color: #D4AF37;
+        }
+
+        .glass-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .glass-card p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .cta-block {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(20, 30, 45, 0.9));
+            border-radius: 30px;
+            padding: 3rem;
+            text-align: center;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .cta-block .phone-large {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #D4AF37;
+            text-decoration: none;
+            display: inline-block;
+            margin: 1rem 0;
+        }
+
+        footer {
+            background: rgba(5, 10, 18, 0.9);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: #D4AF37;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .footer-col p, .footer-col a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.85rem;
+            line-height: 1.8;
+        }
+
+        .footer-col a:hover {
+            color: #D4AF37;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 35px;
+            height: 35px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #D4AF37;
+            color: #0a0f1a;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.4);
+        }
+
+        @media (max-width: 992px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+            }
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .hero-stats {
+                justify-content: center;
+            }
+            .hero-buttons {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            main {
+                padding: 80px 1rem 1rem;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+            .cta-block .phone-large {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Технологии безопасности" onerror="this.style.display='none'">
+            <div class="logo-text">
+                <div class="name">Технологии безопасности</div>
+                <div class="sub">ОХРАННАЯ ОРГАНИЗАЦИЯ</div>
+            </div>
+        </div>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="mainNav">
+            <a href="index.html">Главная</a>
+            <a href="services.html">Услуги</a>
+            <a href="about.html">О нас</a>
+            <a href="vacancies.html">Вакансии</a>
+            <a href="partners.html">Партнёры</a>
+            <a href="contacts.html">Контакты</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="hero">
+        <div class="hero-content">
+            <span class="hero-badge"><i class="fas fa-shield-alt"></i> Лицензия Л056-00106-66/00037135</span>
+            <h1>Ваша безопасность — наша работа</h1>
+            <p>Профессиональная охрана объектов, пультовая защита 24/7, видеонаблюдение. Более 10 лет надёжной защиты в Нижнем Тагиле.</p>
+            <div class="hero-buttons">
+                <a href="tel:+79222299975" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Позвонить</a>
+                <a href="contacts.html" class="btn btn-outline"><i class="fas fa-paper-plane"></i> Оставить заявку</a>
+            </div>
+            <div class="hero-stats">
+                <div><span class="stat-number">10+</span><br><span class="stat-label">лет на рынке</span></div>
+                <div><span class="stat-number">50+</span><br><span class="stat-label">объектов</span></div>
+                <div><span class="stat-number">24/7</span><br><span class="stat-label">поддержка</span></div>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="license-card">
+                <div class="license-icon"><i class="fas fa-certificate"></i></div>
+                <div class="license-number">Л056-00106-66/00037135</div>
+                <div style="margin-top: 1rem; font-size: 0.8rem; color: rgba(255,255,255,0.5);">Работаем с 2013 года</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- УСЛУГИ С КНОПКАМИ "ПОДРОБНЕЕ" -->
+    <div class="section">
+        <div class="section-header">
+            <span class="section-tag">Что мы предлагаем</span>
+            <h2>Наши услуги</h2>
+            <p>Комплексные решения для защиты вашего бизнеса и имущества</p>
+        </div>
+        <div class="grid-3">
+            <div class="glass-card">
+                <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Физическая охрана</h3>
+                <p>Охрана складов, офисов, предприятий. Посты, патрулирование, пропускной режим.</p>
+                <a href="services.html#physical" class="btn btn-outline btn-sm">Подробнее →</a>
+            </div>
+            <div class="glass-card">
+                <div class="card-icon"><i class="fas fa-tachometer-alt"></i></div>
+                <h3>Пультовая охрана</h3>
+                <p>Система мониторинга и экстренного реагирования. Тревожная кнопка 24/7.</p>
+                <a href="services.html#pult" class="btn btn-outline btn-sm">Подробнее →</a>
+            </div>
+            <div class="glass-card">
+                <div class="card-icon"><i class="fas fa-video"></i></div>
+                <h3>Видеонаблюдение</h3>
+                <p>Установка и обслуживание систем видеоконтроля. Удалённый доступ, архив записей.</p>
+                <a href="services.html#video" class="btn btn-outline btn-sm">Подробнее →</a>
+            </div>
+            <div class="glass-card">
+                <div class="card-icon"><i class="fas fa-calendar-alt"></i></div>
+                <h3>Охрана мероприятий</h3>
+                <p>Концерты, выставки, корпоративы, спортивные события.</p>
+                <a href="services.html#event" class="btn btn-outline btn-sm">Подробнее →</a>
+            </div>
+            <div class="glass-card">
+                <div class="card-icon"><i class="fas fa-door-open"></i></div>
+                <h3>Контроль доступа</h3>
+                <p>Системы контроля доступа, турникеты, пропускная система.</p>
+                <a href="services.html#access" class="btn btn-outline btn-sm">Подробнее →</a>
+            </div>
+            <div class="glass-card">
+                <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Мониторинг объектов</h3>
+                <p>Удалённый контроль состояния объектов. Оперативное информирование.</p>
+                <a href="services.html#monitoring" class="btn btn-outline btn-sm">Подробнее →</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta-block">
+        <h2>Нужна надёжная охрана?</h2>
+        <p>Позвоните прямо сейчас — проконсультируем бесплатно!</p>
+        <a href="tel:+79222299975" class="phone-large"><i class="fas fa-phone-alt"></i> +7 (922) 229-99-75</a>
+        <div style="margin-top: 1.5rem;">
+            <a href="contacts.html" class="btn btn-primary">Заказать звонок</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h4>О компании</h4>
+            <p>ООО ЧО "Технологии безопасности" — профессиональная охрана в Нижнем Тагиле с 2013 года.</p>
+            <div class="social-links">
+                <a href="https://vk.com/tehnobeznt" target="_blank"><i class="fab fa-vk"></i></a>
+                <a href="https://t.me/+79222299975" target="_blank"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>Контакты</h4>
+            <p><i class="fas fa-phone"></i> <a href="tel:+79222299975">+7 (922) 229-99-75</a></p>
+            <p><i class="fas fa-envelope"></i> techbez26@bk.ru</p>
+            <p><i class="fas fa-map-marker-alt"></i> г. Нижний Тагил, ул. Октябрьской Революции д. 27</p>
+        </div>
+        <div class="footer-col">
+            <h4>Документы</h4>
+            <p><a href="privacy.html">Политика конфиденциальности</a></p>
+            <p><a href="personal-data.html">Обработка персональных данных</a></p>
+            <p><a href="license.html">Лицензии и свидетельства</a></p>
+        </div>
+        <div class="footer-col">
+            <h4>Реквизиты</h4>
+            <p>ИНН: 6671439365</p>
+            <p>ОГРН: 1136671037986</p>
+            <p>КПП: 662301001</p>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© 2026 ООО ЧО "Технологии безопасности". Все права защищены.</p>
+    </div>
+</footer>
+
+<script>
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('mainNav');
+    if (toggle && nav) {
+        toggle.addEventListener('click', () => {
+            toggle.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                toggle.classList.remove('active');
+                nav.classList.remove('active');
+            });
+        });
+    }
+</script>
+
+<div style="position: fixed; bottom: 25px; right: 25px; z-index: 999;">
+    <a href="tel:+79222299975" style="display: block; width: 55px; height: 55px; background: linear-gradient(135deg, #D4AF37, #b8941f); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);">
+        <i class="fas fa-phone-alt" style="color: #0a0f1a; font-size: 1.3rem;"></i>
+    </a>
+</div>
+
+</body>
+</html>
