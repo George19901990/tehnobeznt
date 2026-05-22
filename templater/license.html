@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5, viewport-fit=cover">
-    <meta name="description" content="Лицензии и свидетельства ООО ЧО Технологии безопасности. Лицензия на осуществление частной охранной деятельности Л056-00106-66/00037135.">
+    <meta name="description" content="Лицензии и свидетельства ООО ЧО Технологии безопасности. Лицензия на осуществление частной охранной деятельности Л056-00106-66/00037135. Скачать выписку из ЕГРЮЛ и реестра лицензий.">
     <title>Лицензии и свидетельства | Технологии безопасности</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -180,7 +180,6 @@
             padding: 100px 2rem 2rem;
         }
 
-        /* ЛИЦЕНЗИОННАЯ КАРТОЧКА */
         .license-card {
             background: rgba(20, 30, 45, 0.5);
             backdrop-filter: blur(10px);
@@ -246,139 +245,94 @@
             margin-bottom: 1.5rem;
         }
 
-        /* БЛОК С ДОКУМЕНТОМ */
-        .document-block {
+        .license-description ul {
+            list-style: none;
+            margin-top: 0.8rem;
+        }
+
+        .license-description li {
+            margin: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .docs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .doc-card {
             background: rgba(255,255,255,0.05);
             border-radius: 20px;
             padding: 1.5rem;
-            margin: 1.5rem 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 1rem;
             transition: all 0.3s;
-        }
-
-        .document-block:hover {
-            background: rgba(255,255,255,0.08);
-            transform: translateX(5px);
-        }
-
-        .document-info {
             display: flex;
             align-items: center;
             gap: 1rem;
         }
 
-        .document-icon {
-            width: 50px;
-            height: 50px;
+        .doc-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.08);
+        }
+
+        .doc-icon {
+            width: 55px;
+            height: 55px;
             background: rgba(212, 175, 55, 0.15);
-            border-radius: 12px;
+            border-radius: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-shrink: 0;
         }
 
-        .document-icon i {
+        .doc-icon i {
             font-size: 1.5rem;
             color: #D4AF37;
         }
 
-        .document-text h3 {
+        .doc-info {
+            flex: 1;
+        }
+
+        .doc-info h3 {
             font-size: 1rem;
             margin-bottom: 0.3rem;
             color: #fff;
         }
 
-        .document-text p {
-            font-size: 0.8rem;
+        .doc-info p {
+            font-size: 0.75rem;
             color: rgba(255,255,255,0.5);
         }
 
         .btn-download {
             display: inline-flex;
             align-items: center;
-            gap: 0.8rem;
-            padding: 0.8rem 1.8rem;
+            gap: 0.5rem;
+            padding: 0.5rem 1.2rem;
             background: linear-gradient(135deg, #D4AF37, #b8941f);
-            border-radius: 50px;
+            border-radius: 40px;
             color: #0a0f1a;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             transition: all 0.3s;
+            flex-shrink: 0;
         }
 
         .btn-download:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
         }
 
-        /* СВИДЕТЕЛЬСТВА */
-        .certs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .cert-card {
-            background: rgba(255,255,255,0.05);
-            border-radius: 20px;
-            padding: 1.5rem;
-            transition: all 0.3s;
-        }
-
-        .cert-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255,255,255,0.08);
-        }
-
-        .cert-icon {
-            width: 50px;
-            height: 50px;
-            background: rgba(212, 175, 55, 0.15);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1rem;
-        }
-
-        .cert-icon i {
-            font-size: 1.3rem;
-            color: #D4AF37;
-        }
-
-        .cert-card h3 {
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
-            color: #fff;
-        }
-
-        .cert-card p {
+        .btn-download i {
             font-size: 0.8rem;
-            color: rgba(255,255,255,0.5);
-            margin-bottom: 1rem;
         }
 
-        .cert-link {
-            color: #D4AF37;
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .cert-link:hover {
-            text-decoration: underline;
-        }
-
-        /* ПРИМЕЧАНИЕ */
         .note-block {
             background: rgba(212, 175, 55, 0.1);
             border-radius: 16px;
@@ -401,7 +355,6 @@
             margin: 0;
         }
 
-        /* КНОПКА НАЗАД */
         .back-link {
             display: inline-flex;
             align-items: center;
@@ -500,12 +453,13 @@
             .license-number {
                 font-size: 1.2rem;
             }
-            .document-block {
-                flex-direction: column;
+            .doc-card {
+                flex-wrap: wrap;
+                justify-content: center;
                 text-align: center;
             }
-            .document-info {
-                flex-direction: column;
+            .btn-download {
+                margin-top: 0.5rem;
             }
         }
     </style>
@@ -548,54 +502,58 @@
 
         <div class="license-info">
             <div class="license-number">Л056-00106-66/00037135</div>
-            <div class="license-date">Лицензия выдана: 08 января 2021 года</div>
+            <div class="license-date">Лицензия выдана: 08 января 2021 года<br>Действует до: 08 января 2031 года</div>
             <div class="license-description">
                 Лицензия на осуществление частной охранной деятельности предоставляет право оказывать следующие виды охранных услуг:
-                <ul style="margin-top: 0.8rem; list-style: none;">
-                    <li style="margin: 0.5rem 0; padding-left: 1.5rem; position: relative;">• Защита жизни и здоровья граждан</li>
-                    <li style="margin: 0.5rem 0; padding-left: 1.5rem; position: relative;">• Охрана объектов и имущества</li>
-                    <li style="margin: 0.5rem 0; padding-left: 1.5rem; position: relative;">• Консультирование и подготовка рекомендаций</li>
-                    <li style="margin: 0.5rem 0; padding-left: 1.5rem; position: relative;">• Обеспечение порядка в местах проведения массовых мероприятий</li>
-                    <li style="margin: 0.5rem 0; padding-left: 1.5rem; position: relative;">• Проектирование, монтаж и обслуживание систем безопасности</li>
+                <ul>
+                    <li>• Защита жизни и здоровья граждан</li>
+                    <li>• Охрана объектов и имущества</li>
+                    <li>• Консультирование и подготовка рекомендаций клиентам</li>
+                    <li>• Обеспечение порядка в местах проведения массовых мероприятий</li>
+                    <li>• Проектирование, монтаж и обслуживание систем безопасности</li>
+                    <li>• Обеспечение внутриобъектового и пропускного режимов</li>
                 </ul>
             </div>
         </div>
 
-        <!-- Скачивание документа -->
-        <div class="document-block">
-            <div class="document-info">
-                <div class="document-icon">
+        <!-- Документы для скачивания -->
+        <div class="docs-grid">
+            <div class="doc-card">
+                <div class="doc-icon">
                     <i class="fas fa-file-pdf"></i>
                 </div>
-                <div class="document-text">
+                <div class="doc-info">
                     <h3>Выписка из реестра лицензий</h3>
-                    <p>PDF документ, 2.5 МБ</p>
+                    <p>PDF документ, актуален на 24.04.2026</p>
                 </div>
+                <a href="documents/license_reestr.pdf" target="_blank" class="btn-download">
+                    <i class="fas fa-download"></i> Скачать
+                </a>
             </div>
-            <a href="images/license.pdf" target="_blank" class="btn-download">
-                <i class="fas fa-download"></i> Скачать PDF
-            </a>
+            <div class="doc-card">
+                <div class="doc-icon">
+                    <i class="fas fa-file-pdf"></i>
+                </div>
+                <div class="doc-info">
+                    <h3>Выписка из ЕГРЮЛ</h3>
+                    <p>PDF документ, актуален на 06.04.2026</p>
+                </div>
+                <a href="documents/egrul.pdf" target="_blank" class="btn-download">
+                    <i class="fas fa-download"></i> Скачать
+                </a>
+            </div>
         </div>
 
-        <!-- Свидетельства -->
-        <div class="certs-grid">
-            <div class="cert-card">
-                <div class="cert-icon"><i class="fas fa-building"></i></div>
-                <h3>Свидетельство о регистрации</h3>
-                <p>ОГРН: 1136671037986</p>
-                <a href="#" class="cert-link" onclick="alert('Документ будет доступен для скачивания после запроса'); return false;">Посмотреть →</a>
-            </div>
-            <div class="cert-card">
-                <div class="cert-icon"><i class="fas fa-id-card"></i></div>
-                <h3>Свидетельство ИНН</h3>
-                <p>ИНН/КПП: 6671439365 / 662301001</p>
-                <a href="#" class="cert-link" onclick="alert('Документ будет доступен для скачивания после запроса'); return false;">Посмотреть →</a>
-            </div>
-            <div class="cert-card">
-                <div class="cert-icon"><i class="fas fa-chart-line"></i></div>
-                <h3>Выписка из ЕГРЮЛ</h3>
-                <p>Актуальная выписка</p>
-                <a href="#" class="cert-link" onclick="alert('Документ будет доступен для скачивания после запроса'); return false;">Посмотреть →</a>
+        <!-- Реквизиты компании -->
+        <div class="license-info" style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1);">
+            <div class="license-number" style="font-size: 1.2rem;">Реквизиты компании</div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.8rem; margin-top: 1rem;">
+                <div><span style="color: rgba(255,255,255,0.5);">Полное наименование:</span><br>ООО ЧОО "Технологии безопасности"</div>
+                <div><span style="color: rgba(255,255,255,0.5);">Сокращённое наименование:</span><br>ООО ЧОО "ТЕХНОЛОГИИ БЕЗОПАСНОСТИ"</div>
+                <div><span style="color: rgba(255,255,255,0.5);">ИНН / КПП:</span><br>6671439365 / 662301001</div>
+                <div><span style="color: rgba(255,255,255,0.5);">ОГРН:</span><br>1136671037986</div>
+                <div><span style="color: rgba(255,255,255,0.5);">Юридический адрес:</span><br>622036, Свердловская область, г. Нижний Тагил, ул. Юбилейная, д. 51, офис 21</div>
+                <div><span style="color: rgba(255,255,255,0.5);">Уставный капитал:</span><br>250 000 ₽</div>
             </div>
         </div>
 
@@ -613,16 +571,16 @@
     <div class="footer-grid">
         <div class="footer-col">
             <h4>О компании</h4>
-            <p>ООО ЧО "Технологии безопасности" — профессиональная охрана в Нижнем Тагиле с 2013 года.</p>
+            <p>ООО ЧОО "Технологии безопасности" — профессиональная охрана в Нижнем Тагиле с 2013 года.</p>
             <div class="social-links">
                 <a href="https://vk.com/tehnobeznt" target="_blank"><i class="fab fa-vk"></i></a>
-                <a href="https://t.me/+79122415099" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="https://t.me/+79222200613" target="_blank"><i class="fab fa-telegram"></i></a>
             </div>
         </div>
         <div class="footer-col">
             <h4>Контакты</h4>
-            <p><i class="fas fa-phone"></i> <a href="tel:+79222200613"> +7 (922) 220-06-13</a></p>
-            <p><i class="fas fa-phone"></i> <a href="tel:+79122415099"> +7 (912) 241-50-99</a></p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+79222200613">+7 (922) 220-06-13</a></p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+79122415099">+7 (912) 241-50-99</a></p>
             <p><i class="fas fa-envelope"></i> tehnobezopasnost-nt@mail.ru</p>
             <p><i class="fas fa-map-marker-alt"></i> г. Нижний Тагил, ул. Октябрьской Революции д. 27</p>
         </div>
@@ -662,7 +620,7 @@
 </script>
 
 <div style="position: fixed; bottom: 25px; right: 25px; z-index: 999;">
-    <a href="tel:+79222299975" style="display: block; width: 55px; height: 55px; background: linear-gradient(135deg, #D4AF37, #b8941f); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);">
+    <a href="tel:+79222200613" style="display: block; width: 55px; height: 55px; background: linear-gradient(135deg, #D4AF37, #b8941f); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);">
         <i class="fas fa-phone-alt" style="color: #0a0f1a; font-size: 1.3rem;"></i>
     </a>
 </div>
